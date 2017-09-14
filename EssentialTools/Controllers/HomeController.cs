@@ -15,7 +15,7 @@ namespace EssentialTools.Controllers
         };
 
         //After binding in NinjectWebCommon.cs
-        public HomeController(IValueCalculator calcParam)
+        public HomeController(IValueCalculator calcParam, IValueCalculator calc2)
         {
             calc = calcParam;
         }
