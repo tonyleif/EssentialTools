@@ -2,11 +2,26 @@
 
 namespace EssentialTools.Models
 {
-    public class MinimumdiscountHelper : IDiscountHelper
+    public class MinimumDiscountHelper : IDiscountHelper
     {
         public decimal ApplyDiscount(decimal totalParam)
         {
-            throw new NotImplementedException();
+            if (totalParam < 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            else if (totalParam > 100)
+            {
+                return totalParam * .9M;
+            }
+            else if (totalParam >= 10 && totalParam <= 100)
+            {
+                return totalParam - 5;
+            }
+            else
+            {
+                return totalParam;
+            }
         }
     }
 }

@@ -9,7 +9,7 @@ namespace EssentialTools.Tests
     {
         private IDiscountHelper getTestObject()
         {
-            return new MinimumdiscountHelper();
+            return new MinimumDiscountHelper();
         }
 
         [TestMethod]
